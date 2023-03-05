@@ -1,0 +1,22 @@
+header{
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  background-color: #303030;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+header .brand-box{
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+header .brand-box i{
+  font-size: 2rem;
+  margin-left: 1rem;
+}

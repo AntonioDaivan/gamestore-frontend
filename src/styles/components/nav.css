@@ -1,0 +1,118 @@
+nav.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+nav.navbar ul{
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+nav.navbar li a{
+  position: relative;
+}
+
+nav.navbar li a::before{
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #fff;
+  transition: .3s;
+}
+
+nav.navbar li a:hover::before{
+  width: 100%;
+}
+
+.li-drop input{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0;
+  position: relative;
+  top: 0px;
+  left: 0;
+}
+
+.li-drop i{
+  position: relative;
+  top: 0px;
+  left: -25px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.li-drop span{
+  position: relative;
+  top: -3px;
+}
+
+.li-drop input:checked ~ i{
+  transform: rotate(180deg);
+}
+
+.li-drop input:checked ~ .menu-list{
+  height: 200px;
+}
+
+.li-drop ul.menu-list{
+  position: absolute;
+  top: 15vh;
+  left: -50px;
+  height: 0px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  overflow: hidden;
+  transition: .5s;
+  background-color: #303030;
+  border-radius: 0 0 10px 10px;
+}
+
+.menu-list li{
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-list li:hover{
+  background-color: #3b3b3b;
+}
+
+.menu-list li a{
+  transition: .2s;
+}
+
+.menu-list li a:hover{
+  transform: translateX(5px);
+}
+
+.pesquisar input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 0;
+  background: rgb(223, 222, 222);
+  outline: none;
+}
+
+.pesquisar {
+  position: relative;
+}
+
+.pesquisar i {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: #000;
+}
