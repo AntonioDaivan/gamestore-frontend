@@ -85,4 +85,11 @@ function main() {
   insertGamesIntoHTML('http://localhost:3000/api/games')
 }
 
+const popup = document.querySelector('.section-administration')
+const btnOpenPopup = document.querySelector('.btn-open-popup')
+const btnClosePopup = document.querySelector('.btn-close-popup')
+
+btnOpenPopup.addEventListener('click', _ => popup.classList.add('active'))
+btnClosePopup.addEventListener('click', _ => popup.classList.remove('active'))
+
 main()
